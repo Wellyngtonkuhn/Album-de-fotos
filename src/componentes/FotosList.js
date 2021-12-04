@@ -7,7 +7,6 @@ import './FotosList.css'
 
 export default function FotosList({title, items}){
     const [left, setLeft] = useState(0)
-    const [right, setRight] = useState(0)
 
     const handleLeftSide = () =>{
         let x = left + Math.round(window.innerWidth / 2)

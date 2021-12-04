@@ -1,0 +1,41 @@
+.destaque{
+    height: 100vh;
+}
+
+.destaqueVertical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.destaqueHorizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 150px;
+    padding-top: 70px;
+}
+
+.destaqueNome{
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+
+.destaqueBotao a{
+    text-decoration: none;
+    background-color: #05A081;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 50px;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.destaqueBotao a:hover{
+    opacity: 0.8;
+}

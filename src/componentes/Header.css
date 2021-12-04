@@ -1,0 +1,39 @@
+header{
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    transition: 0.5s;
+}
+
+header.black{
+    background-color: #111;
+}
+
+.logo{
+    height: 25px;
+}
+
+.logo img{
+    height: 100%;
+}
+
+nav ul li{
+    display: inline-flex;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    padding: 10px;
+}
+
+nav ul li:hover{
+    background-color: rgba(17, 17, 17, 0.315);
+}

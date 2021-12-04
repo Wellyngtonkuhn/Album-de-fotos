@@ -19,21 +19,30 @@ export default{
         getHomeList: async () =>{
             return[
                 {
-                    slug: 'natureza',
+                    slug: 'nature-photograph',
                     title:'Natureza',
-                    items: await basicFetch(`search?query=natureza`)
+                    items: await basicFetch(`search?query=nature-photograph`)
                 },
-
                 {
                     slug: 'oceano',
-                    title: 'Oceano',
+                    title: 'Praia',
                     items: await basicFetch(`search?query=oceano`)
                 },
                 {
-                    slug: 'europa',
-                    title: 'Europa',
-                    items: await basicFetch(`search?query=europa`)
-                }
+                    slug: 'praia',
+                    title: 'Praia',
+                    items: await basicFetch(`search?query=praia`)
+                },
+                {
+                    slug: 'floresta',
+                    title: 'Floresta',
+                    items: await basicFetch(`search?query=floresta`)
+                },
+                {
+                    slug: 'hip-healthy',
+                    title: 'Hup Healthy',
+                    items: await basicFetch(`search?query=hip-healthy`)
+                },
             ]
         }
     }
