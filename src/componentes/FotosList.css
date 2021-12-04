@@ -1,0 +1,69 @@
+.fotosRow{
+    margin-bottom: 30px;
+}
+
+.fotosRow h2{
+    margin: 0px 0px 5px 30px;
+}
+
+.fotosListArea{
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.fotosList{
+    transition: 0.5s;
+}
+.fotosRowItem{
+    display: inline-block;
+    width: 200px;
+    cursor: pointer;
+}
+
+.fotosRowItem img{
+    width: 100%;
+    height: 250px;
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+
+.fotosRowItem img:hover{
+    transform: scale(1);
+}
+
+
+.fotosListAreaFeft,
+.fotosListAreaRight{
+    position: absolute;
+    width: 40px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.61);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.fotosListAreaFeft{
+    left: 0;
+}
+
+.fotosListAreaRight{
+    right: 0;
+}
+
+.fotosRow:hover .fotosListAreaFeft,
+.fotosRow:hover .fotosListAreaRight{
+    opacity: 1;
+}
+
+
+@media (max-width: 760px){
+    .fotosListAreaFeft,
+    .fotosListAreaRight{
+    opacity: 1;
+    }
+}

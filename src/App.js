@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react"
+import './App.css'
 import Api from './componentes/api/Api'
 import FotosList from "./componentes/FotosList"
+import Rodape from './componentes/Rodape'
 
 
 
@@ -20,23 +22,22 @@ export default function App(){
 
 
   return(
-    <div className='page'>
-        <section className='lists'>
+    <section className='page'>
+        <div className='lists'>
           {fotoList.map((item, key)=>{
             return(
               <div>
                 <FotosList key={key} title={item.title} items={item.items}/>
-
-
               </div>
             )
           })}
+        </div>
 
+        <Rodape/>
 
-        </section>
       
 
 
-    </div>
+    </section>
   )
 }
