@@ -1,9 +1,8 @@
-import React, {useState, useEffect} from "react"
+import React,{useState, useEffect} from "react"
+import {BrowserRouter} from 'react-router-dom'
 import './App.css'
-import Api from './componentes/api/Api'
 import Header from "./componentes/Header"
-import Destaque from "./componentes/Destaque"
-import FotosList from "./componentes/FotosList"
+import Rotas from './componentes/rotas/Rotas'
 import Rodape from './componentes/Rodape'
 
 
@@ -11,23 +10,12 @@ import Rodape from './componentes/Rodape'
 
 export default function App(){
 
-  const [fotoList, setFotoList] = useState([])
-  const [destaque, setDestaque] = useState(null)
+ 
+ 
   const [blackHeader, setBlackheader] = useState(false )
   
   
-  useEffect(()=>{
-    const loadAll = async () =>{
-      let list = await Api.getHomeList()
-      setFotoList(list)
-
-      let natureza = list.filter(i=>i.slug === 'nature-photograph')
-      let randomFoto = Math.floor(Math.random() * (natureza[0].items.photos.length - 1))
-      let fotoDestaque = natureza[0].items.photos[randomFoto]
-      setDestaque(fotoDestaque)
-    }
-    loadAll()
-  },[])
+  
 
 
   useEffect(()=>{
@@ -47,26 +35,18 @@ export default function App(){
 
 
   return(
-    <section className='page'>
-      <Header black={blackHeader}/>
-      {destaque &&
-        <Destaque item={destaque}/>
-      }
-        <div className='lists'>
-          {fotoList.map((item, key)=>{
-            return(
-              <div>
-                <FotosList key={key} title={item.title} items={item.items}/>
-              </div>
-            )
-          })}
-        </div>
+    <BrowserRouter>
+      <section className='page'>
+     
+        <Header black={blackHeader}/>
+        <Rotas/>
+        
 
-        <Rodape/>
+
 
       
-
-
-    </section>
+        <Rodape/>
+      </section>
+    </BrowserRouter>
   )
 }

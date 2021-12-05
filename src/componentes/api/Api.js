@@ -25,7 +25,7 @@ export default{
                 },
                 {
                     slug: 'oceano',
-                    title: 'Praia',
+                    title: 'Oceano',
                     items: await basicFetch(`search?query=oceano`)
                 },
                 {
@@ -37,11 +37,6 @@ export default{
                     slug: 'floresta',
                     title: 'Floresta',
                     items: await basicFetch(`search?query=floresta`)
-                },
-                {
-                    slug: 'hip-healthy',
-                    title: 'Hup Healthy',
-                    items: await basicFetch(`search?query=hip-healthy`)
                 },
             ]
         }

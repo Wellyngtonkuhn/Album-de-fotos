@@ -1,4 +1,6 @@
+import React from 'react'
 import './Header.css'
+import {Link} from 'react-router-dom'
 
 
 export default function Header({black }){
@@ -12,8 +14,8 @@ export default function Header({black }){
             </div>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>Fotos</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/galeria">Galeria</Link></li>
                     <li>Api Pexels</li>
                     
                 </ul>

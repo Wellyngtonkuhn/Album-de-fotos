@@ -13,6 +13,7 @@ console.log(item)
             <div className='destaqueVertical'>
                 <div className='destaqueHorizontal'>
                     <div className='destaqueNome'>
+                        <p>photographer</p>
                         <h3>{item.photographer}</h3>
                     </div>
                     <div className='destaqueBotao'>

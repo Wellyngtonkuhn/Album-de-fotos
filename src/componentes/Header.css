@@ -34,6 +34,11 @@ nav ul li{
     padding: 10px;
 }
 
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
 nav ul li:hover{
     background-color: rgba(17, 17, 17, 0.315);
 }
