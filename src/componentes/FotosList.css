@@ -31,7 +31,6 @@
     transform: scale(1);
 }
 
-
 .fotosListAreaFeft,
 .fotosListAreaRight{
     position: absolute;
@@ -53,6 +52,11 @@
 
 .fotosListAreaRight{
     right: 0;
+}
+
+.fotosListAreaFeft svg,
+.fotosListAreaRight svg {
+    font-size: 30px;
 }
 
 .fotosRow:hover .fotosListAreaFeft,

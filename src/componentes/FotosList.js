@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import {FaAngleLeft, FaAngleRight} from 'react-icons/fa'
 import './FotosList.css'
 
 
@@ -32,10 +33,10 @@ export default function FotosList({title, items}){
         <section className='fotosRow'>
             <h2>{title}</h2>
             <div className='fotosListAreaFeft' onClick={handleLeftSide}>
-                -
+                <FaAngleLeft/>
             </div>
             <div className='fotosListAreaRight' onClick={handleRightSide}>
-                +
+                <FaAngleRight/>
             </div>
             <div className='fotosListArea'>
                 <div className='fotosList' style={{
