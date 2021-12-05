@@ -3,7 +3,7 @@ import './Destaque.css'
 
 
 export default function Destaque({item}){
-console.log(item)
+
     return(
         <section className='destaque'style={{
             backgroundSize:'cover',

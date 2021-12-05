@@ -6,7 +6,7 @@ import './FotosList.css'
 
 
 
-export default function FotosList({title, items}){
+export default function FotosList({title, items, slug}){
     const [left, setLeft] = useState(0)
 
     const handleLeftSide = () =>{
@@ -32,6 +32,9 @@ export default function FotosList({title, items}){
     return(
         <section className='fotosRow'>
             <h2>{title}</h2>
+
+            <a href='/galeria'>ver mais</a>
+            
             <div className='fotosListAreaFeft' onClick={handleLeftSide}>
                 <FaAngleLeft/>
             </div>

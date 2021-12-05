@@ -3,6 +3,7 @@ import Api from './api/Api'
 import Destaque from './Destaque'
 import FotosList from './FotosList'
 
+
 export default function Home(){
 
 
@@ -32,8 +33,8 @@ export default function Home(){
             <div className='lists'>
             {fotoList.map((item, key)=>{
                 return(
-                    <div>
-                        <FotosList key={key} title={item.title} items={item.items}/>
+                    <div>                        
+                        <FotosList key={key} title={item.title} items={item.items} slug={item.slug}/>
                     </div>
                     )
             })}
