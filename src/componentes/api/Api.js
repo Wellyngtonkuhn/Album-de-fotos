@@ -22,7 +22,7 @@ export default{
                     slug: 'nature-photograph',
                     title:'Natureza',
                     items: await basicFetch(`search?query=nature-photograph`)
-                },
+                },/*
                 {
                     slug: 'oceano',
                     title: 'Oceano',
@@ -37,7 +37,7 @@ export default{
                     slug: 'floresta',
                     title: 'Floresta',
                     items: await basicFetch(`search?query=floresta`)
-                },
+                },*/
             ]
         }
     }

@@ -33,7 +33,8 @@ export default function FotosList({title, items, slug}){
         <section className='fotosRow'>
             <h2>{title}</h2>
 
-            <a href='/galeria'>ver mais</a>
+            <a href={`/galeria?slug=${slug}`}>{slug}</a><br/>
+           
             
             <div className='fotosListAreaFeft' onClick={handleLeftSide}>
                 <FaAngleLeft/>
