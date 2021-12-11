@@ -8,7 +8,7 @@ export default function Destaque({item}){
         <section className='destaque'style={{
             backgroundSize:'cover',
             backgroundPosition:'center',
-            backgroundImage: `url(${item.src.original})`
+            backgroundImage: `url(${item.src.landscape})`
         }}>
             <div className='destaqueVertical'>
                 <div className='destaqueHorizontal'>

@@ -1,4 +1,4 @@
-const API_KEY ='563492ad6f91700001000001d36b6a2355ab46c1a8579877e9d7e8a7'
+const API_KEY ='563492ad6f9170000100000153777882b0ff4d05b1a7609fdcfeb3f9'
 const API_BASE = 'https://api.pexels.com/v1/'
 
 
@@ -19,26 +19,12 @@ export default{
         getHomeList: async () =>{
             return[
                 {
-                    slug: 'nature-photograph',
-                    title:'Natureza',
-                    items: await basicFetch(`search?query=nature-photograph`)
-                },/*
-                {
-                    slug: 'oceano',
-                    title: 'Oceano',
-                    items: await basicFetch(`search?query=oceano`)
-                },
-                {
-                    slug: 'praia',
-                    title: 'Praia',
-                    items: await basicFetch(`search?query=praia`)
-                },
-                {
-                    slug: 'floresta',
-                    title: 'Floresta',
-                    items: await basicFetch(`search?query=floresta`)
-                },*/
+                    slug: 'wedding',
+                    title:'Casamento',
+                    items: await basicFetch(`search?query=wedding&per_page=30`)
+                }
             ]
         }
     }
 
+    

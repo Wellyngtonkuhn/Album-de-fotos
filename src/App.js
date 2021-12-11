@@ -1,8 +1,8 @@
-import React,{useState, useEffect} from "react"
-import {BrowserRouter} from 'react-router-dom'
+import {useState, useEffect} from "react"
+
 import './App.css'
 import Header from "./componentes/Header"
-import Rotas from './componentes/rotas/Rotas'
+import Home from './componentes/Home'
 import Rodape from './componentes/Rodape'
 
 
@@ -13,8 +13,6 @@ export default function App(){
  
  
   const [blackHeader, setBlackheader] = useState(false )
-  
-  
   
 
 
@@ -35,11 +33,12 @@ export default function App(){
 
 
   return(
-    <BrowserRouter>
+    
       <section className='page'>
      
         <Header black={blackHeader}/>
-        <Rotas/>
+        <Home/>
+        
         
 
 
@@ -47,6 +46,6 @@ export default function App(){
       
         <Rodape/>
       </section>
-    </BrowserRouter>
+ 
   )
 }

@@ -1,22 +1,21 @@
-import React from 'react'
 import './Header.css'
-import {Link} from 'react-router-dom'
 
 
-export default function Header({black }){
+
+export default function Header({black}){
 
     return(
         <header className={black ? 'black' : ''}>
             <div className='logo'>
-                <a href=''>
-                    <img src='' alt=''/>
+                <a href='#home'>
+                    ÁLBUM DE CASAMENTO<img src='' alt=''/>
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/galeria">Galeria</Link></li>
-                    <li>Api Pexels</li>
+                     <li><a href='#home'>Home</a></li>
+                    <li><a href='#fotosList'>Galeria</a></li>
+                    <li><a href='https://www.pexels.com/pt-br/' target='_blank'>Api Pexels</a></li>
                     
                 </ul>
             </nav>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import Api from './api/Api'
 import Destaque from './Destaque'
 import FotosList from './FotosList'
@@ -16,26 +16,25 @@ export default function Home(){
           let list = await Api.getHomeList()
           setFotoList(list)
     
-          let natureza = list.filter(i=>i.slug === 'nature-photograph')
-          let randomFoto = Math.floor(Math.random() * (natureza[0].items.photos.length - 1))
-          let fotoDestaque = natureza[0].items.photos[randomFoto]
+          let wedding = list.filter(i=>i.slug === 'wedding')
+          let randomFoto = Math.floor(Math.random() * (wedding[0].items.photos.length - 1))
+          let fotoDestaque = wedding[0].items.photos[randomFoto]
           setDestaque(fotoDestaque)
         }
         loadAll()
       },[])
 
     return(
-        <section>
-
+        <section id='home'>
             {destaque &&
                 <Destaque item={destaque}/>
             }
             <div className='lists'>
             {fotoList.map((item, key)=>{
                 return(
-                    <div>                        
-                        <FotosList key={key} title={item.title} items={item.items} slug={item.slug}/>
-                    </div>
+                    <section id='fotosList'>                        
+                        <FotosList  key={key} title={item.title} items={item.items} slug={item.slug}/>
+                    </section>
                     )
             })}
             </div>

@@ -25,6 +25,13 @@ header.black{
     height: 100%;
 }
 
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
 nav ul li{
     display: inline-flex;
     margin-right: 10px;
