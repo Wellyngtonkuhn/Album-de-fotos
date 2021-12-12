@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 3em;
+    margin-top: -150px;
 }
 
 .fotosRowItem{
@@ -40,4 +41,22 @@
 
 .paginacao a:hover{
     transform: scale(1);
+}
+
+.loading{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loading img .gif{
+    font-size: 20px;
 }

@@ -14,7 +14,7 @@ export default function Header({black}){
             <nav>
                 <ul>
                      <li><a href='#home'>Home</a></li>
-                    <li><a href='#fotosList'>Galeria</a></li>
+                    <li><a href='#fotosSection'>Galeria</a></li>
                     <li><a href='https://www.pexels.com/pt-br/' target='_blank'>Api Pexels</a></li>
                     
                 </ul>

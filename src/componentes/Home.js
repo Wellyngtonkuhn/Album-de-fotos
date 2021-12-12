@@ -1,43 +1,64 @@
 import {useState, useEffect} from 'react'
-import Api from './api/Api'
 import Destaque from './Destaque'
-import FotosList from './FotosList'
+import {FaAngleLeft, FaAngleRight} from 'react-icons/fa'
+import './Home.css'
+import Loading from '../../src/loading.svg'
+
+const API_KEY ='563492ad6f9170000100000153777882b0ff4d05b1a7609fdcfeb3f9'
+const BASE_URL = 'https://api.pexels.com/v1/search?query=wedding&per_page=30'
 
 
 export default function Home(){
 
 
-    const [fotoList, setFotoList] = useState([])
+    const [fotoList, setFotoList] = useState({})
     const [destaque, setDestaque] = useState(null)
 
 
     useEffect(()=>{
-        const loadAll = async () =>{
-          let list = await Api.getHomeList()
-          setFotoList(list)
-    
-          let wedding = list.filter(i=>i.slug === 'wedding')
-          let randomFoto = Math.floor(Math.random() * (wedding[0].items.photos.length - 1))
-          let fotoDestaque = wedding[0].items.photos[randomFoto]
-          setDestaque(fotoDestaque)
-        }
-        loadAll()
+        fetch(BASE_URL,{
+            headers:{
+                'Content-Type': 'application/json',
+                Authorization: API_KEY
+            },
+        }).then((response) => response.json())
+        .then((response)=>{
+            setFotoList(response)
+            
+
+            let randomDestaque = Math.floor(Math.random() * (response.photos.length - 1))
+            let aletorio = response.photos[randomDestaque]
+            setDestaque(aletorio)
+        })
       },[])
+  
+
+   
 
     return(
         <section id='home'>
             {destaque &&
                 <Destaque item={destaque}/>
             }
-            <div className='lists'>
-            {fotoList.map((item, key)=>{
-                return(
-                    <section id='fotosList'>                        
-                        <FotosList  key={key} title={item.title} items={item.items} slug={item.slug}/>
-                    </section>
-                    )
-            })}
+            <div id='fotosSection' className='fotosSection'>
+                {fotoList.photos && (
+                    fotoList.photos.map((foto) =>(
+                        <div key={foto.id} className='fotosRowItem'>
+                            <img src={foto.src.medium}/>
+                        </div>
+                    ))
+                )} 
             </div>
+            <div className='paginacao'>
+                <a><FaAngleLeft/></a>
+                <a><FaAngleRight/></a>
+            </div> 
+
+            {!destaque &&
+                <div className='loading'>   
+                    <img src={Loading} alt='Loading'/>
+                </div> 
+            }
         </section>
     )
 }

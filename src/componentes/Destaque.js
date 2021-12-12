@@ -8,7 +8,7 @@ export default function Destaque({item}){
         <section className='destaque'style={{
             backgroundSize:'cover',
             backgroundPosition:'center',
-            backgroundImage: `url(${item.src.landscape})`
+            backgroundImage: `url(${item.src.large2x})`
         }}>
             <div className='destaqueVertical'>
                 <div className='destaqueHorizontal'>
@@ -21,7 +21,6 @@ export default function Destaque({item}){
                     </div>      
                 </div>
             </div>            
-
         </section>
     )
 }
