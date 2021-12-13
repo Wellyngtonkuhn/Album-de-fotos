@@ -23,14 +23,14 @@ export default function Home(){
         .then((response)=>{
             setFotoList(response)
             
-
+            // Gerando um item alatório para o componente Destaque
             let randomDestaque = Math.floor(Math.random() * (response.photos.length - 1))
             let aletorio = response.photos[randomDestaque]
             setDestaque(aletorio)
         })
       },[page])
 
-
+      // Funções para a paginação 
       function prevPage(){
         setPage(page - 1)
         if(page <= 1){
