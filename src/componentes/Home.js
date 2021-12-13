@@ -5,18 +5,16 @@ import './Home.css'
 import Loading from '../../src/loading.svg'
 
 const API_KEY ='563492ad6f9170000100000153777882b0ff4d05b1a7609fdcfeb3f9'
-const BASE_URL = 'https://api.pexels.com/v1/search?query=wedding&per_page=30'
-
 
 export default function Home(){
 
-
     const [fotoList, setFotoList] = useState({})
     const [destaque, setDestaque] = useState(null)
+    const [page, setPage] = useState(1)
 
 
     useEffect(()=>{
-        fetch(BASE_URL,{
+        fetch(`https://api.pexels.com/v1/search/?page=${page}&per_page=30&query=wedding`,{
             headers:{
                 'Content-Type': 'application/json',
                 Authorization: API_KEY
@@ -30,10 +28,20 @@ export default function Home(){
             let aletorio = response.photos[randomDestaque]
             setDestaque(aletorio)
         })
-      },[])
-  
+      },[page])
 
-   
+
+      function prevPage(){
+        setPage(page - 1)
+        if(page <= 1){
+            setPage(1)
+        }
+      }
+
+      function nextPage(){
+          setPage(page + 1)
+      }
+  
 
     return(
         <section id='home'>
@@ -50,8 +58,8 @@ export default function Home(){
                 )} 
             </div>
             <div className='paginacao'>
-                <a><FaAngleLeft/></a>
-                <a><FaAngleRight/></a>
+                <a href='#topo' onClick={prevPage}><FaAngleLeft/></a>
+                <a href='#topo' onClick={nextPage}><FaAngleRight/></a> 
             </div> 
 
             {!destaque &&

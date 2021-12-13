@@ -24,7 +24,6 @@
     font-size: 50px;
     font-weight: bold; 
     margin-top: 0px;
-    
 }
 
 .destaqueNome p{
@@ -45,4 +44,26 @@
 
 .destaqueBotao a:hover{
     opacity: 0.8;
+}
+
+@media (max-width: 420px){
+    .destaqueNome h3{
+        text-align: center;       
+    }
+    
+    .destaqueNome p{
+        text-align: center;
+        margin-top: 5em;
+        font-size: 18px;
+    }
+    
+    .destaqueBotao {
+        text-align: center;        
+    }
+
+    .destaqueHorizontal{
+        background: linear-gradient(to right, #111111b9 30%, transparent 70%);       
+        padding: 0;
+    }
+
 }

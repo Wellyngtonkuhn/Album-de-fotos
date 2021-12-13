@@ -7,15 +7,10 @@ import Rodape from './componentes/Rodape'
 
 
 
-
 export default function App(){
-
- 
  
   const [blackHeader, setBlackheader] = useState(false )
   
-
-
   useEffect(()=>{
       const scroll = () =>{
         if(window.scrollY > 50){
@@ -33,23 +28,10 @@ export default function App(){
 
 
   return(
-    
       <section className='page'>
-     
         <Header black={blackHeader}/>
         <Home/>
-        
-        
-
-
-
-      
-        <Rodape/>
-
-      
-            
-           
+        <Rodape/>   
       </section>
- 
   )
 }

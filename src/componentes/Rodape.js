@@ -2,8 +2,6 @@ import './Rodape.css'
 import {FaInstagram, FaLinkedin, FaGithub} from 'react-icons/fa'
 
 
-
-
 export default function Rodape(){
 
     return(

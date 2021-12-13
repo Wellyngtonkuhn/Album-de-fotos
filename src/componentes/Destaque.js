@@ -13,7 +13,7 @@ export default function Destaque({item}){
             <div className='destaqueVertical'>
                 <div className='destaqueHorizontal'>
                     <div className='destaqueNome'>
-                        <p>photographer</p>
+                        <p id='topo'>photographer</p>
                         <h3>{item.photographer}</h3>
                     </div>
                     <div className='destaqueBotao'>
