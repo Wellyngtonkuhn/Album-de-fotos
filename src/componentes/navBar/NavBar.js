@@ -1,23 +1,21 @@
+import { Link } from "react-router-dom";
+
 import "./NavBar.css";
 
 export default function NavBar({ black }) {
   return (
     <header className={black ? "black" : ""}>
       <div className="logo">
-        <a href="#home">ÁLBUM DE CASAMENTO</a>
+        <Link to="/">Últimas Fotos</Link>
       </div>
       <nav id="menu">
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Fotos</Link>
           </li>
+
           <li>
-            <a href="#fotosSection">Galeria</a>
-          </li>
-          <li>
-            <a href="https://www.pexels.com/pt-br/" target="_blank">
-              Api Pexels
-            </a>
+            <Link to="/videos">Videos</Link>
           </li>
         </ul>
       </nav>
