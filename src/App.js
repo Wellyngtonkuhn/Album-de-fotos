@@ -1,9 +1,9 @@
 import {useState, useEffect} from "react"
 
 import './App.css'
-import Header from "./componentes/Header"
-import Home from './componentes/Home'
-import Rodape from './componentes/Rodape'
+import NavBar from "./componentes/navBar/NavBar"
+import Home from './pages/Home'
+import Footer from './componentes/footer/Footer'
 
 
 
@@ -26,12 +26,11 @@ export default function App(){
       }
   },[])
 
-
   return(
       <section className='page'>
-        <Header black={blackHeader}/>
-        <Home/>
-        <Rodape/>   
+        <NavBar black={blackHeader}/>
+          <Home/>
+        <Footer/>   
       </section>
   )
 }

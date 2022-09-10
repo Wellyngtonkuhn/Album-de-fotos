@@ -1,4 +1,4 @@
-header{
+header {
     position: fixed;
     z-index: 99999;
     top: 0;
@@ -13,26 +13,26 @@ header{
     transition: 0.5s;
 }
 
-header.black{
+header.black {
     background-color: #111;
 }
 
-.logo{
+.logo {
     height: 25px;
 }
 
-.logo img{
+.logo img {
     height: 100%;
 }
 
-.logo a{
+.logo a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 1.5em;
 }
 
-nav ul li{
+nav ul li {
     display: inline-flex;
     margin-right: 10px;
     font-size: 20px;
@@ -41,16 +41,16 @@ nav ul li{
     padding: 10px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: white;
 }
 
-nav ul li:hover{
+nav ul li:hover {
     background-color: rgba(17, 17, 17, 0.315);
 }
 
-.menuIcon{
+.menuIcon {
     width: 28px;
     margin-left: 20px;
     display: none;
@@ -58,21 +58,23 @@ nav ul li:hover{
 }
 
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
 
-    .menuIcon{
+    .menuIcon {
         display: block;
     }
-    header{
+
+    header {
         height: 70px;
         padding: 0;
         justify-content: center;
     }
-    .logo{
+
+    .logo {
         z-index: 9999;
     }
 
-    nav ul{
+    nav ul {
         position: absolute;
         left: 0;
         background-color: #111;
@@ -82,13 +84,13 @@ nav ul li:hover{
         visibility: hidden;
     }
 
-    nav ul li{
+    nav ul li {
         display: block;
         margin-top: 20px;
         margin-bottom: 10px;
     }
 
-    nav ul li a{
-         color: #fff;
+    nav ul li a {
+        color: #fff;
     }
 }
