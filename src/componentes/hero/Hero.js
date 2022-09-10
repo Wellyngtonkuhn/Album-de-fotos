@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 
-import Loading from "../assets/loading.svg";
-
 import "./Hero.css";
 
-const API_KEY = "563492ad6f9170000100000153777882b0ff4d05b1a7609fdcfeb3f9";
+import Loading from "../assets/loading.svg";
 
 export default function Hero() {
   const [destaque, setDestaque] = useState([]);
@@ -13,7 +11,7 @@ export default function Hero() {
     fetch(`https://api.pexels.com/v1/curated`, {
       headers: {
         "Content-Type": "application/json",
-        Authorization: API_KEY,
+        Authorization: process.env.REACT_APP_API_KEY,
       },
     })
       .then((response) => response.json())
