@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import "./LastedPicture.css";
+import Loading from "../assets/loading.svg";
 
 const API_KEY = "563492ad6f9170000100000153777882b0ff4d05b1a7609fdcfeb3f9";
 const REACT_APP_BASE_URL_PHOTO = "https://api.pexels.com/v1/";
@@ -36,13 +37,17 @@ export default function ContentDataApiQuery({ type, query }) {
           ? data.photos &&
             data.photos.map((item) => (
               <div key={item.id} className="fotosRowItem">
-                <img src={item.src.medium} />
+                <img
+                  src={item.src.medium ? item.src.medium : Loading}
+                  alt={item.id}
+                />
               </div>
             ))
-          : data.videos &&
+          : 
+          data.videos &&
             data.videos.map((item) => (
               <div key={item.id} className="fotosRowItem">
-                <img src={item.image} />
+                <img src={item.image ? item.image : Loading} alt={item.id} />
               </div>
             ))}
       </div>
