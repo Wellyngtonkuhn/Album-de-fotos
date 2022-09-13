@@ -1,12 +1,12 @@
 import "./Fotos.css";
 import Hero from "../../componentes/hero/Hero";
-import LastedPicture from "../../componentes/lastedPictures/LastedPicture";
+import ContentDataApiQuery from "../../componentes/lastedPictures/ContentDataApiQuery";
 
 export default function Fotos() {
   return (
     <>
       <Hero />
-      <LastedPicture />
+      <ContentDataApiQuery type={"photos"} query={"curated"} />
     </>
   );
 }

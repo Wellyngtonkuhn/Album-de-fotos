@@ -4,9 +4,11 @@ import "./NavBar.css";
 
 export default function NavBar({ black }) {
   return (
-    <header className={black ? "black" : ""}>
+    <header className={black ? "black" : "gray"}>
       <div className="logo">
-        <Link to="/">Últimas Fotos</Link>
+        <a href="https://www.pexels.com">
+          <img src="https://images.pexels.com/lib/api/pexels-white.png" />
+        </a>
       </div>
       <nav id="menu">
         <ul>

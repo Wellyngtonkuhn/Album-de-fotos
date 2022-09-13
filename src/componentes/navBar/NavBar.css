@@ -17,8 +17,13 @@ header.black {
     background-color: #111;
 }
 
+header.gray {
+    background-color: rgba(17, 17, 17, 0.329);
+}
+
 .logo {
-    height: 25px;
+    height: 50px;
+    width: 100px;
 }
 
 .logo img {

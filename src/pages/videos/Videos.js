@@ -1,7 +1,13 @@
+import Hero from '../../componentes/hero/Hero'
+import ContentDataApiQuery from '../../componentes/lastedPictures/ContentDataApiQuery'
 import './Videos.css'
 
 export default function Videos() {
   return (
-    <div>Videos</div>
+    <>
+    <Hero />
+    <ContentDataApiQuery type={'videos'} query={'popular'}/>
+    </>
+
   )
 }
