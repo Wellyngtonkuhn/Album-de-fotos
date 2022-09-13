@@ -3,23 +3,26 @@ import { useState, useEffect } from "react";
 import "./LastedPicture.css";
 import Loading from "../assets/loading.svg";
 
-const API_KEY = "563492ad6f9170000100000153777882b0ff4d05b1a7609fdcfeb3f9";
-const REACT_APP_BASE_URL_PHOTO = "https://api.pexels.com/v1/";
-const REACT_APP_BASE_URL_VIDEO = "https://api.pexels.com/videos/";
+
+const REACT_APP_BASE_URL_PHOTO = 'https://api.pexels.com/v1/'
+
+const REACT_APP_BASE_URL_VIDEO = 'https://api.pexels.com/videos/'
 
 export default function ContentDataApiQuery({ type, query }) {
   const [data, setdata] = useState({});
-  console.log(data);
 
   useEffect(() => {
-    fetch(
-      `${
-        type === "photos" ? REACT_APP_BASE_URL_PHOTO : REACT_APP_BASE_URL_VIDEO
-      }${query}`,
+    let url
+    if(type === 'photos'){
+       url = REACT_APP_BASE_URL_PHOTO
+    } else if(type === 'videos'){
+       url = REACT_APP_BASE_URL_VIDEO
+    }
+    fetch(`${url}${query}`,
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: API_KEY,
+          Authorization: process.env.REACT_APP_API_KEY,
         },
       }
     )
