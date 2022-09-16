@@ -7,7 +7,7 @@ export default function NavBar({ black }) {
     <header className={black ? "black" : "gray"}>
       <div className="logo">
         <a href="https://www.pexels.com">
-          <img src="https://images.pexels.com/lib/api/pexels-white.png" />
+          <img src="https://images.pexels.com/lib/api/pexels-white.png" alt="Pexels_Logo"/>
         </a>
       </div>
       <nav id="menu">
@@ -17,7 +17,7 @@ export default function NavBar({ black }) {
           </li>
 
           <li>
-            <Link to="/videos">Videos</Link>
+            <Link to="videos">Videos</Link>
           </li>
         </ul>
       </nav>

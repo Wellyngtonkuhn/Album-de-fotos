@@ -18,7 +18,7 @@ export default function Hero() {
       .then((response) => {
         // Gerando um item alatório para o componente Destaque
         let randomDestaque = Math.floor(
-          Math.random() * (response.photos.length - 1)
+          Math.random() * (response?.photos?.length - 1)
         );
         let aletorio = response.photos[randomDestaque];
         setDestaque(aletorio);
