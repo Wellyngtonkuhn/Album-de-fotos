@@ -7,7 +7,11 @@ export default function Footer() {
       <p>Criado por Wellyngton Kuhn</p>
       <p>
         Api{" "}
-        <a href="https://www.pexels.com/pt-br/" target="_blank">
+        <a
+          href="https://www.pexels.com/pt-br/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Pexels
         </a>
       </p>
@@ -17,6 +21,7 @@ export default function Footer() {
           <a
             href="https://www.instagram.com/wellyngtonkuhn/?hl=pt-br"
             target="_blank"
+            rel="noreferrer"
           >
             <FaInstagram />
           </a>
@@ -25,12 +30,17 @@ export default function Footer() {
           <a
             href="https://www.linkedin.com/in/wellyngton-kuhn-b56344223/"
             target="_blank"
+            rel="noreferrer"
           >
             <FaLinkedin />
           </a>
         </li>
         <li>
-          <a href="https://github.com/Wellyngtonkuhn" target="_blank">
+          <a
+            href="https://github.com/Wellyngtonkuhn"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub />
           </a>
         </li>

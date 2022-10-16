@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./LastedPicture.css";
-import Loading from "../assets/loading.svg";
-import {  faPlayCircle } from "@fortawesome/free-regular-svg-icons";
+import Loading from "../../assets/loading.svg";
+import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 import { faInfo } from "@fortawesome/free-solid-svg-icons";
 
@@ -42,15 +42,15 @@ export default function ContentDataApiQuery({ type, query }) {
           ? data.photos &&
             data.photos.map((item) => (
               <div key={item.id} className="fotosRowItem">
-                <Link to={`photos/${item.id}`}>
-                <FontAwesomeIcon
+                <Link to={`photos/id/${item.id}`}>
+                  <FontAwesomeIcon
                     className="detalhesPhoto"
                     icon={faInfo}
                     size={"5x"}
-                    title={'Ver mais!'}
-                  />  
+                    title={"Ver mais!"}
+                  />
                   <h1 className="detalhesPhoto-h1">Ver mais</h1>
-                  
+
                   <img
                     src={item.src.medium ? item.src.medium : Loading}
                     alt={item.id}
@@ -61,7 +61,7 @@ export default function ContentDataApiQuery({ type, query }) {
           : data.videos &&
             data.videos.map((item) => (
               <div key={item.id} className="fotosRowItem">
-                <Link to={`videos/${item.id}`}>
+                <Link to={`id/${item.id}`}>
                   <FontAwesomeIcon
                     className="itemIconPlay"
                     icon={faPlayCircle}

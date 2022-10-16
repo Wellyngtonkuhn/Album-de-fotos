@@ -12,9 +12,12 @@ export default function RoutesApp() {
       <Routes>
         <Route element={<LayOut />}>
           <Route path="/" element={<Fotos />} />
-          <Route path='videos' element={<Videos />} />
-          <Route path="photos/:id" element={<SingleFoto />} />
-          <Route path="videos/:id" element={<SingleVideo />} />
+          <Route path="photos/id/:id" element={<SingleFoto />} />
+
+          <Route path='videos/' element={<Videos />} />
+
+          <Route path="videos/id/:id" element={<SingleVideo />} />
+
         </Route>
       </Routes>
     </>

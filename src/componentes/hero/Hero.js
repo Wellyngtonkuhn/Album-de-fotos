@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import "./Hero.css";
 
-import Loading from "../assets/loading.svg";
+import Loading from "../../assets/loading.svg";
 
 export default function Hero() {
   const [destaque, setDestaque] = useState([]);
@@ -17,17 +17,21 @@ export default function Hero() {
       .then((response) => response.json())
       .then((response) => {
         // Gerando um item alatório para o componente Destaque
+
         let randomDestaque = Math.floor(
           Math.random() * (response?.photos?.length - 1)
         );
-        let aletorio = response.photos[randomDestaque];
-        setDestaque(aletorio);
+
+        if (randomDestaque) {
+          let aletorio = response?.photos[randomDestaque];
+          setDestaque(aletorio);
+        }
       });
   }, []);
 
   return (
     <>
-      {!destaque ? (
+      {destaque.length === 0 ? (
         <div className="loading">
           <img src={Loading} alt="Loading" />
         </div>
@@ -51,6 +55,7 @@ export default function Hero() {
                   href={destaque.photographer_url}
                   alt={destaque.photographer_url}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Visitar Perfil no Pexels
                 </a>

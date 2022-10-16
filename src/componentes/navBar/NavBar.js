@@ -17,7 +17,7 @@ export default function NavBar({ black }) {
           </li>
 
           <li>
-            <Link to="videos">Videos</Link>
+            <Link to="videos/">Videos</Link>
           </li>
         </ul>
       </nav>
