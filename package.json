@@ -2,6 +2,9 @@
   "name": "album-de-fotos",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.17.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
